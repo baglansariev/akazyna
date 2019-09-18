@@ -12,14 +12,18 @@
 	    	$this->view->asset->setMetaKeys('ключ1, ключ2');
 	    	$this->view->asset->setTitle('Главная');
             $this->view->asset->setCss('/public/style/css/main-slide.css');
+            $this->view->asset->setCss('/public/style/css/accordion.css');
 //            $this->view->asset->setCss('/public/style/products/products.css');
 //            $this->view->asset->setCss('/public/style/news/news.css');
 //            $this->view->asset->setCss('/public/style/owl-carousel/owl-gallery.css');
-//            $this->view->asset->setJs('/public/style/simple-slider/js/simple-slider.js');
+            $this->view->asset->setJs('/public/style/js/accordion.js');
 //            $this->view->asset->setJs('/public/style/owl-carousel/owl-carousel-switcher.js');
 
 
 	    	$data['main_slide'] = $this->load->controller('modules/mainSlide');
+	    	$data['featureboxes'] = $this->load->controller('modules/featureBox');
+	    	$data['call_to_action'] = $this->load->controller('modules/callToAction');
+	    	$data['questionnaire'] = $this->load->controller('modules/questionnaire');
 //	    	$data['products'] = $this->load->controller('modules/products')->getList(4);
 //	    	$data['featurebox'] = $this->load->controller('modules/featureBox');
 //	    	$data['call_to_action'] = $this->load->controller('modules/callToAction');
