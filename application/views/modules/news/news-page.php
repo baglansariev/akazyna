@@ -15,7 +15,7 @@
                                 <?php echo $item['date_insert'] ?>
                             </p>
                             <p class="article-view-text">
-                                <?php echo $item['full_text'] ?>
+                                <?php echo $item['full_desc'] ?>
                             </p>
                             <?php if(isset($item['news_images'])): ?>
                                 <?php echo $item['news_images'] ?>

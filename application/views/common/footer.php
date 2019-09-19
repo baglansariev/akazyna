@@ -6,20 +6,20 @@
                         <p class="footer-content-title">Контакты</p>
                         <p class="footer-contacts">
                             <span>Мы находимся по адресу:</span>
-                            <span>160000 РК, г.Шымкент, ул. Капал батыра 123 (5 км)</span>
+                            <span>160000 РК, г.Шымкент, ул. Байтурсынова 9</span>
                         </p>
                         <div class="footer-networks">
                             <p>
-                                <i class="fas fa-phone-volume"></i>
-                                <span>+7 (7252) 43-90-20</span>
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>+7 (702) 937-56-55</span>
                             </p>
                             <p>
                                 <i class="fas fa-mobile-alt"></i>
-                                <span>+7 (702) 111-44-66</span>
+                                <span>+7 (778) 111-44-66</span>
                             </p>
                             <p>
                                 <i class="fas fa-envelope"></i>
-                                <span>pioner-elit@mail.ru</span>
+                                <span>info@asarkazyna.kz</span>
                             </p>
                         </div>
                         <div class="footer-social">
@@ -39,10 +39,10 @@
                     <div class="footer-top-content">
                         <p class="footer-content-title">О компании</p>
                         <p class="footer-about">
-                            Мы, Группа компаний «Пионер» производим доброкачественные продукты,
-                            радуя тем самым своих потребителей и партнеров. А делаем мы это за счет
-                            качественного сырья, добросовестных и профессиональных сотрудников,
-                            и многолетнего опыта в этой сфере.
+                            Одним из потребительских кооперативов является потребительский кооператив «Асар Казына»,
+                            созданный в соответствии с решением учредительного собрания кооператива (протокол от «01» июня 2018 года) как
+                            добровольное объединение граждан на основе их членства в целях удовлетворения потребностей в приобретении
+                            движимого и недвижимого имущества.
                         </p>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
         <div class="footer-bottom">
             <div class="footer-sign container">
                 <span class="client-sign">
-                    &copy; <a href="/">ПИОНЕР</a> <?php echo date('Y') ?> г. Все права защищены.
+                    &copy; <a href="/">Асар Казына</a> <?php echo date('Y') ?> г. Все права защищены.
                 </span>
                 <span class="developer-sign">
                     Разработка и поддержка сайта - <a href="">STARNET.KZ</a>

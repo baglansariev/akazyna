@@ -10,7 +10,7 @@
                             <div class="article-content">
                                 <a href="/news/show/<?php echo $article['id'] ?>" class="article-title"><?php echo $article['title'] ?></a>
                                 <p class="article-date"><?php echo $article['date_insert'] ?></p>
-                                <p class="article-short-text"><?php echo $article['short_text'] ?></p>
+                                <p class="article-short-text"><?php echo $article['short_desc'] ?></p>
                             </div>
                         </div>
                     </div>

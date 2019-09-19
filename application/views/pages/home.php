@@ -23,4 +23,7 @@
 </section>
 <?php echo $call_to_action; ?>
 <?php echo $questionnaire; ?>
+<?php echo $latest_news; ?>
+<?php echo $payers_video; ?>
+<?php echo $payers_counter; ?>
 <?php echo $footer; ?>

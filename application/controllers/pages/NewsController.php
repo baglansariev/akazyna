@@ -8,7 +8,7 @@
         public function indexAction()
         {
             $this->view->asset->setTitle('Новости');
-            $this->view->asset->setCss('/public/style/news/news.css');
+            $this->view->asset->setCss('/public/style/css/news.css');
 
             $data = array();
             $data['page_title'] = $this->load->controller('modules/pageTitle')->getPageTitle('Новости');
@@ -16,13 +16,13 @@
             $data['header'] = $this->load->controller('common/header');
             $data['footer'] = $this->load->controller('common/footer');
 
-            $this->view->response('News/index', $data);
+            $this->view->response('pages/news/index', $data);
         }
 
         public function articleAction()
         {
             $this->view->asset->setTitle('Новости');
-            $this->view->asset->setCss('/public/style/news/news.css');
+            $this->view->asset->setCss('/public/style/css/news.css');
             $this->view->asset->setCss('/public/style/owl-carousel/owl-gallery.css');
             $this->view->asset->setJs('/public/style/owl-carousel/owl-carousel-switcher.js');
 
@@ -32,6 +32,6 @@
             $data['header'] = $this->load->controller('common/header');
             $data['footer'] = $this->load->controller('common/footer');
 
-            $this->view->response('News/one-news', $data);
+            $this->view->response('pages/news/one-news', $data);
         }
     }

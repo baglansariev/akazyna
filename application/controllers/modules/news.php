@@ -25,7 +25,7 @@
                 foreach ($news as $key => $item) {
                     $data['news'][$key]['id'] = $item['id'];
                     $data['news'][$key]['title'] = $item['title'];
-                    $data['news'][$key]['short_text'] = $item['short_text'];
+                    $data['news'][$key]['short_desc'] = $item['short_desc'];
                     $data['news'][$key]['main_img'] = $item['main_img'];
                     $data['news'][$key]['date_insert'] = $item['date_insert'];
                 }
@@ -49,7 +49,7 @@
                     foreach($article_data as $key => $article) {
                         $data['article'][$key]['id'] = $article['id'];
                         $data['article'][$key]['title'] = $article['title'];
-                        $data['article'][$key]['full_text'] = $article['full_text'];
+                        $data['article'][$key]['full_desc'] = $article['full_desc'];
                         $data['article'][$key]['main_img'] = $article['main_img'];
                         $data['article'][$key]['date_insert'] = $article['date_insert'];
 

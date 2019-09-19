@@ -14,6 +14,6 @@
             $data['header'] = $this->load->controller('common/header');
             $data['footer'] = $this->load->controller('common/footer');
 
-            $this->view->response('Contacts/index', $data);
+            $this->view->response('pages/contacts', $data);
         }
 }
