@@ -12,8 +12,8 @@
             'controller' => 'about',
             'action' => 'index',
         ],
-        'products(/page/[0-9]+)?' => [
-            'controller' => 'products',
+        'conditions' => [
+            'controller' => 'conditions',
             'action' => 'index',
         ],
         'products/flour/[0-9]+' => [

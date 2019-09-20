@@ -42,4 +42,5 @@
             <?php echo $mobile_menu; ?>
         </div>
     </div>
+    <?php echo $popup_form; ?>
 </header>
