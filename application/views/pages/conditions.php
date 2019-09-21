@@ -1,3 +1,4 @@
 <?php echo $header; ?>
-conditions
+<?php echo $page_title; ?>
+<?php echo $calculator; ?>
 <?php echo $footer; ?>

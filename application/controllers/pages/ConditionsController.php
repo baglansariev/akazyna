@@ -9,6 +9,8 @@
             $this->view->asset->setTitle('Условия');
 
             $data = array();
+            $data['page_title'] = $this->load->controller('modules/pageTitle')->getPageTitle('Условия');
+            $data['calculator'] = $this->load->controller('modules/calculator');
             $data['header'] = $this->load->controller('common/header');
             $data['footer'] = $this->load->controller('common/footer');
 
