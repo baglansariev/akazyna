@@ -54,9 +54,23 @@
     color: #888;
     display: inline-block;
 }
-.calc-table table tbody tr td{
+.calc-table table tbody tr td, .calc-table table tbody tr th{
     padding: 10px 5px;
     text-align: center;
+}
+.calc-table table tbody tr:last-of-type{
+    background-color: #1E87E1;
+    color: #fff;
+}
+.calc-table table tbody tr:last-of-type td{
+    font-style: italic;
+}
+.calc-year{
+    background-color: #f8f8f8;
+}
+.calc-message{
+    font-size: 12px;
+    color: red;
 }
 
 
