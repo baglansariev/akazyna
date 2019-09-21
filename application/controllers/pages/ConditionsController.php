@@ -7,6 +7,7 @@
         public function indexAction()
         {
             $this->view->asset->setTitle('Условия');
+            $this->view->asset->setCss('/public/style/css/calculator.css');
 
             $data = array();
             $data['page_title'] = $this->load->controller('modules/pageTitle')->getPageTitle('Условия');
