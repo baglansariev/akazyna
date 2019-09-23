@@ -22,7 +22,7 @@
                     <div class="form-froup">
                         <p class="form-group-title">Переплата за весь срок <span>(тг)</span></p>
                         <p class="calc-result">
-                            <b><?php if(isset($total_overpayment)) echo $total_overpayment . ' тг'; ?></b>
+                            <b><?php if(isset($total_overpayment) && $total_overpayment != 0) echo $total_overpayment . ' тг'; ?></b>
                         </p>
                     </div>
                     <input class="gen-btn main-btn" type="submit" value="Расчитать">

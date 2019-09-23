@@ -16,9 +16,9 @@
             'controller' => 'conditions',
             'action' => 'index',
         ],
-        'products/flour/[0-9]+' => [
-            'controller' => 'products',
-            'action' => 'showOneProduct',
+        'faq' => [
+            'controller' => 'faq',
+            'action' => 'index',
         ],
         'news(/page/[0-9]+)?' => [
             'controller' => 'news',
