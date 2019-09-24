@@ -20,7 +20,7 @@
 	    	$data['main_slide'] = $this->load->controller('modules/mainSlide');
 	    	$data['featureboxes'] = $this->load->controller('modules/featureBox');
 	    	$data['call_to_action'] = $this->load->controller('modules/callToAction');
-	    	$data['questionnaire'] = $this->load->controller('modules/questionnaire');
+	    	$data['questionnaire'] = $this->load->controller('modules/questionnaire')->getFrequentQuestions();
             $data['latest_news'] = $this->load->controller('modules/news')->getList(3);
             $data['payers_video'] = $this->load->controller('modules/payers')->getPayersVideo();
             $data['payers_counter'] = $this->load->controller('modules/payers')->payersCounter();

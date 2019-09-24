@@ -46,6 +46,12 @@
 .accordion-text{
     width: 100%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.accordion-date{
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 .show{
     display: none;

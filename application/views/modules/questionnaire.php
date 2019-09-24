@@ -1,48 +1,33 @@
-<section class="questionnaire">
-    <div class="container">
-        <h3 class="row-title">Часто задаваемые вопросы</h3>
-        <div class="row">
-            <div class="accordion">
-                <div class="acc">
-                    <div class="accordion-head">
-                    <span class="acc-plus">
-                        <i class="fas fa-plus"></i>
-                    </span>
-                        <span class="acc-minus">
-                        <i class="fas fa-minus"></i>
-                    </span>
-                        <p class="accordion-title">Lorem ipsum dolor sit amet koroche anau minau ?</p>
-                    </div>
-                    <div class="accordion-body">
-                        <p class="accordion-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus dignissimos
-                            hic minima quos. Ab assumenda consequatur delectus exercitationem ipsum magnam molestias
-                            odio pariatur quia, suscipit voluptas voluptatibus? Ad, inventore?
-                        </p>
-                    </div>
-                </div>
-                <div class="acc">
-                    <div class="accordion-head">
-                    <span class="acc-plus">
-                        <i class="fas fa-plus"></i>
-                    </span>
-                        <span class="acc-minus">
-                        <i class="fas fa-minus"></i>
-                    </span>
-                        <p class="accordion-title">Lorem ipsum dolor sit amet koroche anau minau ?</p>
-                    </div>
-                    <div class="accordion-body">
-                        <p class="accordion-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus dignissimos
-                            hic minima quos. Ab assumenda consequatur delectus exercitationem ipsum magnam molestias
-                            odio pariatur quia, suscipit voluptas voluptatibus? Ad, inventore?
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus dignissimos
-                            hic minima quos. Ab assumenda consequatur delectus exercitationem ipsum magnam molestias
-                            odio pariatur quia, suscipit voluptas voluptatibus? Ad, inventore?
-                        </p>
-                    </div>
+<?php if(isset($questions)): ?>
+    <section class="questionnaire">
+        <div class="container">
+            <h3 class="row-title">Часто задаваемые вопросы</h3>
+            <div class="row">
+                <div class="accordion">
+                    <?php foreach($questions as $question): ?>
+                        <div class="acc">
+                            <div class="accordion-head">
+                        <span class="acc-plus">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                                <span class="acc-minus">
+                            <i class="fas fa-minus"></i>
+                        </span>
+                                <p class="accordion-title"><?php echo $question['client_text']; ?></p>
+                            </div>
+                            <div class="accordion-body">
+                                <p class="accordion-text">
+                                    <?php if(isset($question['question_date'])): ?>
+
+                                    <?php endif; ?>
+                                    <span class="accordion-date"><?php echo $question['question_date']; ?></span>
+                                    <?php echo $question['answer']; ?>
+                                </p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
