@@ -16,7 +16,7 @@
             'controller' => 'conditions',
             'action' => 'index',
         ],
-        'faq' => [
+        'faq(/page/[0-9]+)?' => [
             'controller' => 'faq',
             'action' => 'index',
         ],

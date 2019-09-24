@@ -56,10 +56,10 @@ class Pagination
         for($i = $begin; $i <= ($begin + $limit); $i++){
             if($i > $this->totalPages){break;}
             if($this->currentPage == $i){
-                $pagesViewPort .= '<li><a href="/news/page/' . $i . '" class="page-active">' . $i . '</a></li>';
+                $pagesViewPort .= '<li><a href="/' . $this->pageName . '/page/' . $i . '" class="page-active">' . $i . '</a></li>';
             }
             else{
-                $pagesViewPort .= '<li><a href="/news/page/' . $i . '">' . $i . '</a></li>';
+                $pagesViewPort .= '<li><a href="/' . $this->pageName . '/page/' . $i . '">' . $i . '</a></li>';
             }
         }
 

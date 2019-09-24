@@ -12,7 +12,8 @@
 
             $data = array();
             $data['page_title'] = $this->load->controller('modules/pageTitle')->getPageTitle('Вопрос-Ответ');
-            $data['questions'] = $this->load->controller('modules/questionnaire')->getQuestionsList(4);
+            $data['questions'] = $this->load->controller('modules/questionnaire')->getQuestionsList(4, true);
+            $data['question_form'] = $this->load->controller('modules/questionnaire')->getQuestionForm();
 
             $data['header'] = $this->load->controller('common/header');
             $data['footer'] = $this->load->controller('common/footer');

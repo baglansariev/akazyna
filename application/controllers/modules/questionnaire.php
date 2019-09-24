@@ -19,7 +19,7 @@
             $questions = $this->question_model->getQuestionsList($limit);
 
             if($pagination){
-                $totalNews = $this->question_model->getTotalNews()['count'];
+                $totalNews = $this->question_model->getTotalQuestions()['count'];
                 $pagination = new Pagination($limit, $totalNews, $this->request->getUriWithoutParams());
                 $data['pages_viewport'] = $pagination->pagesViewPort(5);
                 $questions = $this->question_model->getQuestionsList(['from' => $pagination->from, 'notes' => $limit]);
@@ -44,5 +44,15 @@
         public function getFrequentQuestions()
         {
             return $this->load->view('modules/questionnaire');
+        }
+
+        public function getQuestionForm()
+        {
+            return $this->load->view('modules/question-form');
+        }
+
+        public function setQuestion()
+        {
+            //..
         }
     }

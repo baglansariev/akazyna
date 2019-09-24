@@ -17,7 +17,8 @@
                 FROM " . DB_PREFIX . "questions 
                 LEFT JOIN " . DB_PREFIX . "question_answers 
                 ON " . DB_PREFIX . "question_answers.question_id = " . DB_PREFIX . "questions.id 
-                WHERE status = 'published' AND language_id = 1";
+                WHERE status = 'published' AND language_id = 1 
+                ORDER BY " . DB_PREFIX . "questions.date_insert DESC";
 
             if(isset($limit['from']) && isset($limit['notes'])){
                 $sql .= " LIMIT " . (int)$limit['from'] . ", " . (int)$limit['notes'];
@@ -31,6 +32,17 @@
 
         public function getFrequentQuestions()
         {
+            //..
+        }
 
+        public function getTotalQuestions()
+        {
+            $sql = "SELECT COUNT(*) AS count FROM " . DB_PREFIX . "questions";
+            return $this->db->getRow($sql);
+        }
+
+        public function setQuestion()
+        {
+            //..
         }
     }

@@ -26,4 +26,6 @@ $(function () {
             height: height,
         }, 500);
     });
+
+    $('.question-phone').mask('+7(999)999-99-99', {autoclear: false});
 });
