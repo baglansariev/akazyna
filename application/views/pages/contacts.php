@@ -3,26 +3,133 @@
         <?php echo $page_title; ?>
         <section class="contact-us">
             <div class="container">
+                <h3 class="row-title title-center">г. Шымкент</h3>
+                <p class="row-subtitle subtitle-to-top">Аль Фарабийский р-он, ул.Байтурсынова 9, 2 этаж, офис 6, (рядом с редакцией «Айғақ»)</p>
                 <div class="row">
-                    <div class="contacts col-lg-6 col-md-12">
-                        <h3 class="row-title">Наши контакты</h3>
-                        <p class="contact-adress">
-                            <span>Мы находимся по адресу:</span>
-                            <span>160000 РК, г.Шымкент, ул. Капал батыра 123 (5 км)</span>
-                        </p>
-                        <p class="contact-info">
-                            <i class="fas fa-phone-volume"></i>
-                            <span>+7 (7252) 43-90-20</span>
-                        </p>
-                        <p class="contact-info">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>+7 (702) 111-44-66</span>
-                        </p>
-                        <p class="contact-info">
-                            <i class="fas fa-envelope"></i>
-                            <span>pioner-elit@mail.ru</span>
-                        </p>
+                    <div class="employee col-lg-4 col-md-6 col-xs-12">
+                        <div class="employee-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="employee-content">
+                            <p class="employee-name">Айтмамбетов Еркин Мирамханович</p>
+                            <p class="employee-status">Председатель</p>
+                            <div class="employee-phone">
+                                <p class="phone">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>8 778 238 6161</span>
+                                </p>
+                                <p class="phone">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>8 705 285 0505</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    <div class="employee col-lg-4 col-md-6 col-xs-12">
+                        <div class="employee-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="employee-content">
+                            <p class="employee-name">Төкенова Фарида Қалдыбайқызы</p>
+                            <p class="employee-status">Менеджер</p>
+                            <div class="employee-phone">
+                                <p class="phone">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>+7 702 937 56 55</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee col-lg-4 col-md-6 col-xs-12">
+                        <div class="employee-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="employee-content">
+                            <p class="employee-name">Бертай Асия Бақытқызы</p>
+                            <p class="employee-status">Менеджер</p>
+                            <div class="employee-phone">
+                                <p class="phone">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>8-775-764-58-88</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h3 class="row-title title-center">г. Уральск</h3>
+                <p class="row-subtitle subtitle-to-top">ул.Кердерi 108, бизнес центр «Камал», 1 этаж, 13 кабинет</p>
+                <div class="row">
+                    <div class="employee col-lg-4 col-md-6 col-xs-12">
+                        <div class="employee-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="employee-content">
+                            <p class="employee-name">Калиев Оралбек Кайырбекович</p>
+                            <p class="employee-status">Региональный Представитель</p>
+                            <div class="employee-phone">
+                                <p class="phone">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>8-702-616-64-90</span>
+                                </p>
+                                <p class="phone">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>8-776-616-6490</span>
+                                </p>
+                                <p class="phone">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>8-700-616-64-90</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee col-lg-4 col-md-6 col-xs-12">
+                        <div class="employee-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="employee-content">
+                            <p class="employee-name">Бексегуров Атапкел Жанболатович</p>
+                            <p class="employee-status">Менеджер</p>
+                            <div class="employee-phone">
+                                <p class="phone">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>8-777-565-31-57</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h3 class="row-title title-center">г. Атырау</h3>
+                <p class="row-subtitle subtitle-to-top">Привокзальный Мкр 3 дом 12Б, здание «Султан Би», 3 этаж, 308 офис</p>
+                <div class="row">
+                    <div class="employee col-lg-4 col-md-6 col-xs-12">
+                        <div class="employee-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="employee-content">
+                            <p class="employee-name">Кабиев Шынарбек Мугалимович</p>
+                            <p class="employee-status">Региональный Представитель</p>
+                            <div class="employee-phone">
+                                <p class="phone">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>8-701-514-87-31</span>
+                                </p>
+                                <p class="phone">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>8-707-514-87-31</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-us">
+            <div class="container">
+                <div class="row">
                     <div class="feedback contact-us-feedback col-lg-6 col-md-12">
                         <h3 class="row-title">Напишите нам</h3>
                         <form method="post" class="contact-form">
@@ -40,10 +147,10 @@
                             <input id="contact_send" type="submit" value="Отправить">
                         </form>
                     </div>
-                </div>
-                <div class="adress-map">
-                    <h3 class="row-title">Мы на карте</h3>
-                    <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A1f11c8508c91c9967db90dce4a1c466432236ae7b2f801ed6e4435914e5f5f86&amp;source=constructor" frameborder="0"></iframe>
+                    <div class="adress-map col-lg-6 col-md-12">
+                        <h3 class="row-title">Мы на карте</h3>
+                        <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A9b3157cb562c61c92cacc7ba84539e46928514e2e9036a240526bc3439515d0a&amp;source=constructor" frameborder="0"></iframe>
+                    </div>
                 </div>
             </div>
         </section>

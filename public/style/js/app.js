@@ -7,4 +7,15 @@ $(function(){
         $('.mobile-menu-cover').fadeOut();
     });
 
+    $('.language').click(function (e) {
+        e.preventDefault();
+        $('.language-list').fadeIn();
+    });
+    
+    $('body').click(function (e) {
+        if(e.target !== $('.language span')[0]){
+            $('.language-list').fadeOut();
+        }
+    });
+
 });

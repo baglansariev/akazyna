@@ -47,8 +47,26 @@ header{
 .header-contacts a, .header-actions a{
 	margin-right: 15px;
 }
-.header-contacts a:hover, .header-actions a:hover{
+.header-contacts a:hover, .header-actions a:hover, .lang-active{
 	color: #2089F4;
+}
+.header-actions{
+	position: relative;
+}
+.language-list{
+	position: absolute;
+	left: 0;
+	top: 130%;
+	background-color: #fff;
+	padding: 10px 15px;
+	display: none;
+	color: #000;
+	z-index: 10;
+	border: 1px solid #ebebeb;
+}
+.lang{
+	margin-right: 0 !important;
+	display: block;
 }
 .header-mid{
 	width: 100%;
@@ -229,6 +247,15 @@ header{
 	margin-bottom: 60px;
 	margin-top: 20px;
 	position: relative;
+}
+.row-subtitle{
+	color: #888888;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.subtitle-to-top{
+	margin-top: -40px;
 }
 .title-center{
 	text-align: center;
@@ -556,11 +583,11 @@ footer .container{
 	transition: all ease 0.4s;
 }
 .pagination-list li a:hover{
-	background-color: #E30016;
+	background-color: #1E89F4;
 	color: #fff;
 }
 .page-active{
-	background-color: #E30016 !important;
+	background-color: #1E89F4 !important;
 	color: #fff;
 }
 .contact-us{
@@ -669,6 +696,51 @@ footer .container{
 	border-radius: 5px;
 	border: none;
 	cursor: pointer;
+}
+.employee{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.employee-icon{
+	font-size: 75px;
+	color: #888;
+	margin-bottom: 20px;
+}
+.employee-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.employee-name{
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+.employee-status{
+	color: #888;
+	font-size: 14px;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+.employee-phone{
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+}
+.employee-phone .phone{
+	margin-bottom: 5px;
+}
+.employee-phone .phone span{
+	margin-left: 5px;
+}
+.contact-us .container{
+	margin-bottom: 40px;
+}
+.contact-us .container .row{
+	display: flex;
+	justify-content: center;
 }
 
 

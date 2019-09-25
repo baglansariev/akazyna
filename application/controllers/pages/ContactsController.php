@@ -1,5 +1,4 @@
 <?php
-
     namespace controllers\pages;
     use core\engine\Controller;
 
@@ -11,6 +10,8 @@
 
             $data = array();
             $data['page_title'] = $this->load->controller('modules/pageTitle')->getPageTitle('Контакты');
+            $data['languages'] = $this->load->controller('common/language')->getLanguageList();
+            devPrint($data['languages'], true);
             $data['header'] = $this->load->controller('common/header');
             $data['footer'] = $this->load->controller('common/footer');
 

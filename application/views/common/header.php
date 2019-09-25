@@ -16,6 +16,10 @@
                     <i class="fas fa-globe-americas"></i>
                     <span>Русский</span>
                 </a>
+                <nav class="language-list">
+                    <a href="#" class="lang lang-active">Русский</a>
+                    <a href="#" class="lang">Қазақша</a>
+                </nav>
                 <a href="#" class="account">
                     <i class="fas fa-user-alt"></i>
                     <span>Войти</span>

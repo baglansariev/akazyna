@@ -8,6 +8,7 @@
     use core\lib\Response;
     use core\lib\Session;
     use core\lib\Mail;
+    use core\lib\Language;
 
 	abstract class Controller
 	{
@@ -18,6 +19,7 @@
         public $response;
         public $form;
         public $mail;
+        public $language;
 
 		public function __construct()
 		{
@@ -28,5 +30,6 @@
             $this->response = new Response;
             $this->form = new Form;
             $this->mail = new Mail;
+            $this->language = new Language;
 		}
 	}
