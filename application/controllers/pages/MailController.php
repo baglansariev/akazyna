@@ -1,15 +1,11 @@
 <?php
     namespace controllers\pages;
     use core\engine\Controller;
-    use core\lib\Mail;
-    use core\lib\Form;
 
     class MailController extends Controller
     {
         public function sendMailAction()
         {
-            $mail = new Mail;
-            $form = new Form;
             $json = array();
 
             if(
@@ -22,19 +18,19 @@
                 $phone = $this->request->post['client_number'];
                 $email = $this->request->post['client_email'];
 
-                if($form->isEmail($email)){
+                if($this->form->isEmail($email)){
                     if($this->request->has('client_text', 'post')){
                         $message = $this->request->post['client_text'];
                     }
-                    if(!$mail->formSend($name, $phone, $email, $message)){
-                        $json['error'] = $mail->error_msg;
+                    if(!$this->mail->formSend($name, $phone, $email, $message)){
+                        $json['error'] = $this->mail->error_msg;
                     }
                     else{
-                        $json['success'] = $mail->success_msg;
+                        $json['success'] = $this->mail->success_msg;
                     }
                 }
                 else{
-                    $json['error'] = $form->error_msg['is_email'];
+                    $json['error'] = $this->form->error_msg['is_email'];
                 }
 
                 $this->response->outputJSON($json);

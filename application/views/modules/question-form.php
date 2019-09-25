@@ -2,42 +2,46 @@
     <div class="container">
         <h3 class="row-title title-center">Задать свой вопрос</h3>
         <div class="row">
-            <form>
-                <div class="alert alert-success" role="alert">
-                    A simple success alert—check it out!
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="alert alert-danger" role="alert">
-                    A simple danger alert—check it out!
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+            <form method="post">
+                <?php if(isset($success_msg)): ?>
+                    <div class="alert alert-success" role="alert">
+                        <?php echo $success_msg; ?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php endif; ?>
+                <?php if(isset($error_msg)): ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo $error_msg; ?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php endif; ?>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputName">Ф.И.О.</label>
-                        <input type="text" class="form-control" id="inputName" placeholder="Ф.И.О.">
+                        <input name="quest_name" type="text" class="form-control" id="inputName" placeholder="Ф.И.О." required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail">E-mail</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+                        <input name="quest_email" type="email" class="form-control" id="inputEmail" placeholder="E-mail" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputPhone">Телефон</label>
-                        <input type="text" class="form-control question-phone" id="inputPhone" placeholder="Телефон">
+                        <input name="quest_phone" type="text" class="form-control question-phone" id="inputPhone" placeholder="Телефон" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputCaptcha">Задача</label>
-                        <input type="number" class="form-control" id="inputCaptcha" placeholder="3 х 3 = ?">
+                        <input name="quest_captcha" type="number" class="form-control" id="inputCaptcha" placeholder="3 х 3 = ?" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputQuestion">Ваш вопрос</label>
-                    <textarea name="question" class="form-control" id="inputQuestion" placeholder="Ваш вопрос"></textarea>
+                    <textarea name="quest_text" class="form-control" id="inputQuestion" placeholder="Ваш вопрос" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Отправить</button>
             </form>

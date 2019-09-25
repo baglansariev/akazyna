@@ -7,6 +7,7 @@
     use core\lib\Request;
     use core\lib\Response;
     use core\lib\Session;
+    use core\lib\Mail;
 
 	abstract class Controller
 	{
@@ -16,6 +17,7 @@
         public $session;
         public $response;
         public $form;
+        public $mail;
 
 		public function __construct()
 		{
@@ -25,5 +27,6 @@
             $this->session = new Session;
             $this->response = new Response;
             $this->form = new Form;
+            $this->mail = new Mail;
 		}
 	}

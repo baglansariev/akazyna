@@ -37,12 +37,14 @@
 
         public function getTotalQuestions()
         {
-            $sql = "SELECT COUNT(*) AS count FROM " . DB_PREFIX . "questions";
+            $sql = "SELECT COUNT(*) AS count FROM " . DB_PREFIX . "questions WHERE status = 'published'";
             return $this->db->getRow($sql);
         }
 
-        public function setQuestion()
+        public function setQuestion($client_name, $client_phone, $client_email, $client_text)
         {
-            //..
+            $sql = "INSERT INTO " . DB_PREFIX . "questions SET client_name = '" . $client_name . "', client_phone = '" . $client_phone . "', client_email = '" . $client_email . "', client_text = '" . $client_text . "'";
+            $this->db->changeData($sql);
+            return true;
         }
     }

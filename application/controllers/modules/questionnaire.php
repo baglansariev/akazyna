@@ -6,6 +6,8 @@
     class Questionnaire extends Controller
     {
         public $question_model;
+        public $error_msg;
+        public $success_msg;
 
         public function __construct()
         {
@@ -48,11 +50,40 @@
 
         public function getQuestionForm()
         {
-            return $this->load->view('modules/question-form');
+            $this->setQuestion();
+            $data = array();
+            $data['success_msg'] = $this->success_msg;
+            $data['error_msg'] = $this->error_msg;
+
+            return $this->load->view('modules/question-form', $data);
         }
 
         public function setQuestion()
         {
-            //..
+            if($this->request->has('quest_name') &&
+                $this->request->has('quest_email') &&
+                $this->request->has('quest_phone') &&
+                $this->request->has('quest_captcha') &&
+                $this->request->has('quest_text')
+            ){
+                $quest_name = $this->request->post['quest_name'];
+                $quest_email = $this->request->post['quest_email'];
+                $quest_phone = $this->request->post['quest_phone'];
+                $quest_captcha = $this->request->post['quest_captcha'];
+                $quest_text = $this->request->post['quest_text'];
+
+                if(!$this->form->isEmail($quest_email)){
+                    $this->error_msg = 'Некорректный E-mail адрес. Попробуйте заново.';
+                    return false;
+                }
+                if((int)$quest_captcha !== 9){
+                    $this->error_msg = 'Неправильное решение задачи. Попробуйте заново.';
+                    return false;
+                }
+                if($this->question_model->setQuestion($quest_name, $quest_phone, $quest_email, $quest_text) && $this->mail->questionFormSend($quest_name, $quest_phone, $quest_email, $quest_text)){
+                    $this->success_msg = 'Спасибо! Ваш вопрос отправлен на рассмотрение. Мы опубликуем его вместе с ответом';
+                    return true;
+                }
+            }
         }
     }
