@@ -18,4 +18,5 @@ $(function(){
         }
     });
 
+    $('.language span').text($('.lang-active').text());
 });

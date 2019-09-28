@@ -3,15 +3,13 @@
 <?php echo $featureboxes; ?>
 <section class="about-intro">
     <div class="container">
-        <h3 class="row-title">Предмет и цели деятельности кооператива</h3>
+        <h3 class="row-title"><?php echo $local_about_intro_row_title; ?></h3>
         <div class="row">
             <div class="about-intro-content col-lg-6 col-sm-12">
                 <p class="about-intro-text">
-                    Улучшение социального положения членов кооператива, путем объединения их вкладов, оказания взаимопомощи членами кооператива
-                    с целью приобретения недвижимого и движимого имущества, для дальнейшей передачи в собственность соответствующему члену
-                    кооператива в порядке соответствующей очередности, с отлагательным условием 100 (сто) процентного паенакопления в кооперативе.
+                    <?php echo $local_about_intro_text; ?>
                 </p>
-                <a href="/about" class="about-intro-button gen-btn main-btn">Подробнее</a>
+                <a href="/about" class="about-intro-button gen-btn main-btn"><?php echo $local_about_intro_button; ?></a>
             </div>
             <div class="about-intro-video col-lg-6 col-sm-12">
                 <div>

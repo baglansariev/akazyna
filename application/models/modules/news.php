@@ -4,9 +4,9 @@
 
     class News extends Model
     {
-        public function getList($limit = false)
+        public function getList($limit = false, $language_id)
         {
-            $sql = "SELECT * FROM " . DB_PREFIX . "news ORDER BY date_insert DESC";
+            $sql = "SELECT * FROM " . DB_PREFIX . "news WHERE language_id = " . (int)$language_id . " ORDER BY date_insert DESC";
 
             if(isset($limit['from']) && isset($limit['notes'])){
                 $sql .= " LIMIT " . (int)$limit['from'] . ", " . (int)$limit['notes'];

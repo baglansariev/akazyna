@@ -9,7 +9,8 @@
 	define('ROUTES_PATH', CORE_PATH . 'web/');
 	define('CONTROLLERS_PATH', APPLICATION_PATH . 'controllers/');
 	define('VIEWS_PATH', APPLICATION_PATH . 'views/');
-	define('LAYOUTS_PATH', VIEWS_PATH . 'layouts/');
+    define('LANGUAGE_PATH', APPLICATION_PATH . 'language/');
+    define('LAYOUTS_PATH', VIEWS_PATH . 'layouts/');
 	define('MODELS_PATH', APPLICATION_PATH . 'models/');
 	define('IMAGES_PATH', PUBLIC_PATH . 'images/');
 	define('STYLES_PATH', PUBLIC_PATH . 'styles/');

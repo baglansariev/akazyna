@@ -7,8 +7,11 @@
         public function index()
         {
             $data = array();
+            $language = $this->load->language('pages/common');
             $featurebox_model = $this->load->model('modules/featureBox');
-            $featureboxes = $featurebox_model->getList();
+            $featureboxes = $featurebox_model->getList($language->language_id);
+
+            $data['local_featurebox_row_title'] = $language->get('local_featurebox_row_title');
 
             $data['featureboxes'] = array();
 

@@ -757,12 +757,7 @@ footer .container{
 		margin-right: 10px;
 	}
 }
-@media screen and (max-width: 1175px){
-	.main-desktop-logo, .header-mid::after{
-		display: none;
-	}
-}
-@media screen and (max-width: 991px){
+@media screen and (max-width: 1199px){
 	.desktop-menu{
 		display: none;
 	}

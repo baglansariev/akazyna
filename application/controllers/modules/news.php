@@ -6,17 +6,27 @@
 
     class News extends Controller
     {
+        public $lang;
+
+        public function __construct()
+        {
+            parent::__construct();
+            $this->lang = $this->load->language('pages/common');
+        }
+
         public function getList($limit = false, $pagination = false)
         {
             $news_model = $this->load->model('modules/news');
             $data = array();
-            $news = $news_model->getList($limit);
+            $news = $news_model->getList($limit, $this->lang->language_id);
+
+            $data['local_news_title'] = $this->lang->get('local_news_title');
 
             if($pagination){
                 $totalNews = $news_model->getTotalNews()['count'];
                 $pagination = new Pagination($limit, $totalNews, $this->request->getUriWithoutParams());
                 $data['pages_viewport'] = $pagination->pagesViewPort(5);
-                $news = $news_model->getList(['from' => $pagination->from, 'notes' => $limit]);
+                $news = $news_model->getList(['from' => $pagination->from, 'notes' => $limit], $this->lang->language_id);
             }
 
 

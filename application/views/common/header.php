@@ -12,17 +12,20 @@
                 </a>
             </div>
             <div class="header-actions">
-                <a href="#" class="language">
-                    <i class="fas fa-globe-americas"></i>
-                    <span>Русский</span>
-                </a>
-                <nav class="language-list">
-                    <a href="#" class="lang lang-active">Русский</a>
-                    <a href="#" class="lang">Қазақша</a>
-                </nav>
+                <?php if(isset($languages)): ?>
+                    <a href="#" class="language">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Русский</span>
+                    </a>
+                    <nav class="language-list">
+                        <?php foreach($languages as $language): ?>
+                            <a href="<?php echo $language['link']; ?>" class="lang <?php echo $language['class']; ?>"><?php echo $language['name']; ?></a>
+                        <?php endforeach;?>
+                    </nav>
+                <?php endif; ?>
                 <a href="#" class="account">
                     <i class="fas fa-user-alt"></i>
-                    <span>Войти</span>
+                    <span><?php echo $local_sign_in; ?></span>
                 </a>
             </div>
         </div>
@@ -38,7 +41,7 @@
         <div class="container">
             <?php echo $desktop_menu; ?>
             <a id="feedback" href="">
-                Заказать звонок
+                <?php echo $local_feedback; ?>
             </a>
             <a href="" class="mobile-menu-toggler">
                 <i class="fas fa-bars"></i>

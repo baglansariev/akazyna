@@ -8,7 +8,8 @@
         {
             $data = array();
             $action_model = $this->load->model('modules/callToAction');
-            $action_data = $action_model->getActionData();
+            $language = $this->load->language();
+            $action_data = $action_model->getActionData($language->language_id);
 
             if($action_data){
                 foreach($action_data as $key => $action_info) {

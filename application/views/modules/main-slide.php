@@ -8,8 +8,8 @@
                     </p>
                     <h1 class="slide-title"><?php echo $slide['title'] ?></h1>
                     <div class="slide-buttons">
-                        <?php if(isset($slide_links)): ?>
-                            <?php foreach($slide_links as $slide_link): ?>
+                        <?php if(isset($slide['links'])): ?>
+                            <?php foreach($slide['links'] as $slide_link): ?>
                                 <a href="<?php echo $slide_link['href'] ?>" class="gen-btn main-btn"><?php echo $slide_link['text'] ?></a>
                             <?php endforeach; ?>
                         <?php endif; ?>

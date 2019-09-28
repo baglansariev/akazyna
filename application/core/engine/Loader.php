@@ -63,4 +63,13 @@
 				return  new $path;
 			}
 		}
+
+        public function language($path = false)
+        {
+            $languageClaass = 'controllers\common\Language';
+
+            if(class_exists($languageClaass)){
+                return  new $languageClaass($path);
+            }
+        }
 	}

@@ -4,23 +4,21 @@
 
     class Language extends Model
     {
-        public $language_id;
-
-        public function __construct($lang)
-        {
-            parent::__construct();
-            $this->language_id = $this->getLanguageId($lang);
-        }
-
         public function getLanguageList()
         {
             $sql = "SELECT * FROM " . DB_PREFIX . "languages";
             return $this->db->getAllRows($sql);
         }
 
-        public function getLanguageId($lang_name)
+        public function getLanguageId($lang)
         {
-            $sql = "SELECT id AS lang_id FROM " . DB_PREFIX . "languages WHERE link = '" . $lang_name . "'";
+            $sql = "SELECT id AS lang_id FROM " . DB_PREFIX . "languages WHERE link = '" . $lang . "'";
             return $this->db->getRow($sql)['lang_id'];
+        }
+
+        public function getLanguageCode($lang)
+        {
+            $sql = "SELECT code AS lang_code FROM " . DB_PREFIX . "languages WHERE link = '" . $lang . "'";
+            return $this->db->getRow($sql)['lang_code'];
         }
     }

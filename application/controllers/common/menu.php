@@ -5,18 +5,20 @@
     class Menu extends Controller
     {
         public $menu_model;
+        public $lang;
 
         public function __construct()
         {
             parent::__construct();
             $this->menu_model = $this->load->model('common/menu');
+            $this->lang = $this->load->language();
         }
 
         public function mainMenu($active = false)
         {
             $data = array();
             $data['menu_list'] = array();
-            $menu_list = $this->menu_model->getMenuList();
+            $menu_list = $this->menu_model->getMenuList($this->lang->language_id);
 
             if($menu_list){
                 foreach ($menu_list as $key => $menu) {

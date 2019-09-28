@@ -1,6 +1,6 @@
 <section class="news">
     <div class="container">
-        <h3 class="row-title">Последние новости</h3>
+        <h3 class="row-title"><?php echo $local_news_title; ?></h3>
         <div class="news-list row">
             <?php if(isset($news)): ?>
                 <?php foreach($news as $article): ?>

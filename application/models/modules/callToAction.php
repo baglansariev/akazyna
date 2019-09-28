@@ -4,9 +4,9 @@
 
     class CallToAction extends Model
     {
-        public function getActionData()
+        public function getActionData($language_id)
         {
-            $sql = "SELECT * FROM " . DB_PREFIX . "call_to_action WHERE language_id = 1";
+            $sql = "SELECT * FROM " . DB_PREFIX . "call_to_action WHERE language_id = " . (int)$language_id;
             return $this->db->getAllRows($sql);
         }
     }
