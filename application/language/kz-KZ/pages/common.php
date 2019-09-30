@@ -1,5 +1,6 @@
 <?php
     return [
+        // Home page
         'local_featurebox_row_title' => 'Баспананы бөліп төлеуге қалай алуға болады?',
         'local_about_intro_row_title' => 'Кооператив қызметінің мақсаты және заты',
         'local_about_intro_text' => 'Кооператив мүшелерінің әлеуметтік мәртебесін олардың 
@@ -11,4 +12,5 @@
         'local_about_intro_button'=> 'Толығырақ',
 
         'local_news_title' => 'Соңғы жаңалықтар',
+
     ];

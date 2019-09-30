@@ -3,8 +3,8 @@
         <?php echo $page_title; ?>
         <section class="contact-us">
             <div class="container">
-                <h3 class="row-title title-center">г. Шымкент</h3>
-                <p class="row-subtitle subtitle-to-top">Аль Фарабийский р-он, ул.Байтурсынова 9, 2 этаж, офис 6, (рядом с редакцией «Айғақ»)</p>
+                <h3 class="row-title title-center"><?php echo $local_city_shymkent; ?></h3>
+                <p class="row-subtitle subtitle-to-top"><?php echo $local_city_shymkent_adress; ?></p>
                 <div class="row">
                     <div class="employee col-lg-4 col-md-6 col-xs-12">
                         <div class="employee-icon">
@@ -12,7 +12,7 @@
                         </div>
                         <div class="employee-content">
                             <p class="employee-name">Айтмамбетов Еркин Мирамханович</p>
-                            <p class="employee-status">Председатель</p>
+                            <p class="employee-status"><?php echo $local_director; ?></p>
                             <div class="employee-phone">
                                 <p class="phone">
                                     <i class="fas fa-mobile-alt"></i>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="employee-content">
                             <p class="employee-name">Төкенова Фарида Қалдыбайқызы</p>
-                            <p class="employee-status">Менеджер</p>
+                            <p class="employee-status"><?php echo $local_manager; ?></p>
                             <div class="employee-phone">
                                 <p class="phone">
                                     <i class="fas fa-mobile-alt"></i>
@@ -46,7 +46,7 @@
                         </div>
                         <div class="employee-content">
                             <p class="employee-name">Бертай Асия Бақытқызы</p>
-                            <p class="employee-status">Менеджер</p>
+                            <p class="employee-status"><?php echo $local_manager; ?></p>
                             <div class="employee-phone">
                                 <p class="phone">
                                     <i class="fas fa-mobile-alt"></i>
@@ -58,8 +58,8 @@
                 </div>
             </div>
             <div class="container">
-                <h3 class="row-title title-center">г. Уральск</h3>
-                <p class="row-subtitle subtitle-to-top">ул.Кердерi 108, бизнес центр «Камал», 1 этаж, 13 кабинет</p>
+                <h3 class="row-title title-center"><?php echo $local_city_uralsk; ?></h3>
+                <p class="row-subtitle subtitle-to-top"><?php echo $local_city_uralsk_adress; ?></p>
                 <div class="row">
                     <div class="employee col-lg-4 col-md-6 col-xs-12">
                         <div class="employee-icon">
@@ -67,7 +67,7 @@
                         </div>
                         <div class="employee-content">
                             <p class="employee-name">Калиев Оралбек Кайырбекович</p>
-                            <p class="employee-status">Региональный Представитель</p>
+                            <p class="employee-status"><?php echo $local_regional_manager; ?></p>
                             <div class="employee-phone">
                                 <p class="phone">
                                     <i class="fas fa-mobile-alt"></i>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="employee-content">
                             <p class="employee-name">Бексегуров Атапкел Жанболатович</p>
-                            <p class="employee-status">Менеджер</p>
+                            <p class="employee-status"><?php echo $local_manager; ?></p>
                             <div class="employee-phone">
                                 <p class="phone">
                                     <i class="fas fa-mobile-alt"></i>
@@ -102,8 +102,8 @@
                 </div>
             </div>
             <div class="container">
-                <h3 class="row-title title-center">г. Атырау</h3>
-                <p class="row-subtitle subtitle-to-top">Привокзальный Мкр 3 дом 12Б, здание «Султан Би», 3 этаж, 308 офис</p>
+                <h3 class="row-title title-center"><?php echo $local_city_atyrau; ?></h3>
+                <p class="row-subtitle subtitle-to-top"><?php echo $local_city_atyrau_adress; ?></p>
                 <div class="row">
                     <div class="employee col-lg-4 col-md-6 col-xs-12">
                         <div class="employee-icon">
@@ -111,7 +111,7 @@
                         </div>
                         <div class="employee-content">
                             <p class="employee-name">Кабиев Шынарбек Мугалимович</p>
-                            <p class="employee-status">Региональный Представитель</p>
+                            <p class="employee-status"><?php echo $local_regional_manager; ?></p>
                             <div class="employee-phone">
                                 <p class="phone">
                                     <i class="fas fa-mobile-alt"></i>
@@ -131,10 +131,10 @@
             <div class="container">
                 <div class="row">
                     <div class="feedback contact-us-feedback col-lg-6 col-md-12">
-                        <h3 class="row-title">Напишите нам</h3>
+                        <h3 class="row-title"><?php echo $local_feedback_title; ?></h3>
                         <form method="post" class="contact-form">
                             <div class="client-data">
-                                <input type="text" name="client_name" placeholder="Ф.И.О." required>
+                                <input type="text" name="client_name" placeholder="<?php echo $local_feedback_name; ?>" required>
                                 <input type="text" name="client_number" placeholder="Телефон" class="phone_mask" required>
                             </div>
                             <div class="client-data">
@@ -142,13 +142,13 @@
                                 <input type="text" name="client_captcha" placeholder="3 x 3 = ?" required>
                             </div>
                             <div class="client-data">
-                                <textarea name="client_text" placeholder="Сообщение"></textarea>
+                                <textarea name="client_text" placeholder="<?php echo $local_feedback_message; ?>"></textarea>
                             </div>
-                            <input id="contact_send" type="submit" value="Отправить">
+                            <input id="contact_send" type="submit" value="<?php echo $local_feedback_button; ?>">
                         </form>
                     </div>
                     <div class="adress-map col-lg-6 col-md-12">
-                        <h3 class="row-title">Мы на карте</h3>
+                        <h3 class="row-title"><?php echo $local_map_title; ?></h3>
                         <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3A9b3157cb562c61c92cacc7ba84539e46928514e2e9036a240526bc3439515d0a&amp;source=constructor" frameborder="0"></iframe>
                     </div>
                 </div>

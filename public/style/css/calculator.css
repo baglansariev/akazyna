@@ -52,7 +52,7 @@
 .calc-table table thead tr th span{
     font-size: 11px;
     color: #888;
-    display: inline-block;
+    display: block;
 }
 .calc-table table tbody tr td, .calc-table table tbody tr th{
     padding: 10px 5px;

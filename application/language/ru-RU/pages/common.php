@@ -1,5 +1,6 @@
 <?php
     return [
+        // Home page
         'local_featurebox_row_title' => 'Как получить недвижимость в рассрочку?',
 
         'local_about_intro_row_title' => 'Предмет и цели деятельности кооператива',

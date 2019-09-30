@@ -8,23 +8,25 @@
         public $question_model;
         public $error_msg;
         public $success_msg;
+        public $lang;
 
         public function __construct()
         {
             parent::__construct();
             $this->question_model = $this->load->model('modules/questionnaire');
+            $this->lang = $this->load->language('modules/questionnaire');
         }
 
         public function getQuestionsList($limit = false, $pagination = false)
         {
             $data = array();
-            $questions = $this->question_model->getQuestionsList($limit);
+            $questions = $this->question_model->getQuestionsList($limit, $this->lang->language_id);
 
             if($pagination){
                 $totalNews = $this->question_model->getTotalQuestions()['count'];
                 $pagination = new Pagination($limit, $totalNews, $this->request->getUriWithoutParams());
                 $data['pages_viewport'] = $pagination->pagesViewPort(5);
-                $questions = $this->question_model->getQuestionsList(['from' => $pagination->from, 'notes' => $limit]);
+                $questions = $this->question_model->getQuestionsList(['from' => $pagination->from, 'notes' => $limit], $this->lang->language_id);
             }
 
             $data['questions']  = array();
@@ -40,6 +42,8 @@
                 }
             }
 
+            $data['local_questions_list_title'] = $this->lang->get('local_questions_list_title');
+
             return $this->load->view('modules/questionnaire', $data);
         }
 
@@ -54,6 +58,12 @@
             $data = array();
             $data['success_msg'] = $this->success_msg;
             $data['error_msg'] = $this->error_msg;
+
+            $data['local_questions_form_title'] = $this->lang->get('local_questions_form_title');
+            $data['local_questions_form_name'] = $this->lang->get('local_questions_form_name');
+            $data['local_questions_form_captcha'] = $this->lang->get('local_questions_form_captcha');
+            $data['local_questions_form_text'] = $this->lang->get('local_questions_form_text');
+            $data['local_questions_form_button'] = $this->lang->get('local_questions_form_button');
 
             return $this->load->view('modules/question-form', $data);
         }
@@ -73,15 +83,15 @@
                 $quest_text = $this->request->post['quest_text'];
 
                 if(!$this->form->isEmail($quest_email)){
-                    $this->error_msg = 'Некорректный E-mail адрес. Попробуйте заново.';
+                    $this->error_msg = $this->lang->get('local_questions_form_email_msg');
                     return false;
                 }
                 if((int)$quest_captcha !== 9){
-                    $this->error_msg = 'Неправильное решение задачи. Попробуйте заново.';
+                    $this->error_msg = $this->lang->get('local_questions_form_captcha_msg');
                     return false;
                 }
                 if($this->question_model->setQuestion($quest_name, $quest_phone, $quest_email, $quest_text) && $this->mail->questionFormSend($quest_name, $quest_phone, $quest_email, $quest_text)){
-                    $this->success_msg = 'Спасибо! Ваш вопрос отправлен на рассмотрение. Мы опубликуем его вместе с ответом';
+                    $this->success_msg = $this->lang->get('local_questions_form_success_msg');
                     return true;
                 }
             }

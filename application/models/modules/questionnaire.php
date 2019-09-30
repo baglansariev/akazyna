@@ -4,7 +4,7 @@
 
     class Questionnaire extends Model
     {
-        public function getQuestionsList($limit = false)
+        public function getQuestionsList($limit = false, $language_id = 1)
         {
             $sql = "SELECT "
                 . DB_PREFIX . "questions.id, "
@@ -17,7 +17,7 @@
                 FROM " . DB_PREFIX . "questions 
                 LEFT JOIN " . DB_PREFIX . "question_answers 
                 ON " . DB_PREFIX . "question_answers.question_id = " . DB_PREFIX . "questions.id 
-                WHERE status = 'published' AND language_id = 1 
+                WHERE status = 'published' AND language_id = " . (int)$language_id . " 
                 ORDER BY " . DB_PREFIX . "questions.date_insert DESC";
 
             if(isset($limit['from']) && isset($limit['notes'])){

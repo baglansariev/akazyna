@@ -1,31 +1,31 @@
 <section class="calculator">
     <div class="container">
-        <h3 class="row-title title-center">Онлайн калькулятор</h3>
+        <h3 class="row-title title-center"><?php echo $local_calculator_main_title; ?></h3>
         <div class="row d-flex justify-content-center">
             <div class="calc-module col-lg-6 col-md-8 col-sm-10 col-xs-12">
                 <form method="post" class="calc">
                     <div class="form-group">
-                        <label for="duration">Срок выделения средств <span>(мес)</span></label>
+                        <label for="duration"><?php echo $local_duration; ?> <span>(<?php echo $local_duration_unit; ?>)</span></label>
                         <i class="calc-message"><?php if(isset($duration_msg)) echo $duration_msg; ?></i>
-                        <input id="duration" type="number" name="duration" value="<?php if(isset($duration)) echo $duration; ?>" placeholder="от 1 до 180" required>
+                        <input id="duration" type="number" name="duration" value="<?php if(isset($duration)) echo $duration; ?>" placeholder="<?php echo $local_duration_placeholder; ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="object-price">Стоимость объекта <span>(тг)</span></label>
+                        <label for="object-price"><?php echo $local_object_price; ?> <span>(<?php echo $local_object_price_unit; ?>)</span></label>
                         <i class="calc-message"><?php if(isset($obj_price_msg)) echo $obj_price_msg; ?></i>
-                        <input id="object-price" type="number" name="object-price" value="<?php if(isset($obj_price)) echo $obj_price; ?>" placeholder="от 3 000 000" required>
+                        <input id="object-price" type="number" name="object-price" value="<?php if(isset($obj_price)) echo $obj_price; ?>" placeholder="<?php echo $local_object_placeholder; ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="initial-fee">Первоначальный взнос <span>(%)</span></label>
+                        <label for="initial-fee"><?php echo $local_initial_fee; ?> <span>(<?php echo $local_initial_fee_unit; ?>)</span></label>
                         <i class="calc-message"><?php if(isset($init_fee_msg)) echo $init_fee_msg; ?></i>
-                        <input id="initial-fee" type="number" name="initial-fee" value="<?php if(isset($init_fee_percent)) echo $init_fee_percent; ?>" placeholder="от 28" required>
+                        <input id="initial-fee" type="number" name="initial-fee" value="<?php if(isset($init_fee_percent)) echo $init_fee_percent; ?>" placeholder="<?php echo $local_initial_fee_placeholder; ?>" required>
                     </div>
                     <div class="form-froup">
-                        <p class="form-group-title">Переплата за весь срок <span>(тг)</span></p>
+                        <p class="form-group-title"><?php echo $local_overpayment_text; ?> <span>(<?php echo $local_overpayment_unit; ?>)</span></p>
                         <p class="calc-result">
                             <b><?php if(isset($total_overpayment) && $total_overpayment != 0) echo $total_overpayment . ' тг'; ?></b>
                         </p>
                     </div>
-                    <input class="gen-btn main-btn" type="submit" value="Расчитать">
+                    <input class="gen-btn main-btn" type="submit" value="<?php echo $local_calc_button; ?>">
                 </form>
             </div>
         </div>
@@ -33,20 +33,20 @@
 </section>
 <section class="calculator-table">
     <div class="container-fluid">
-        <h3 class="row-title title-center">График платежей</h3>
+        <h3 class="row-title title-center"><?php echo $local_table_title; ?></h3>
         <div class="row">
             <div class="calc-table col-lg-12">
                 <table border="1">
                     <thead>
                         <tr>
-                            <th>Месяц</th>
-                            <th>Стоимость недвижимости</th>
-                            <th>Вступительный взнос</th>
-                            <th>Первоначальный паевой взнос</th>
-                            <th>Ежемесячный паевой взнос</th>
-                            <th>Членский взнос <span>(2 МРП)</span></th>
-                            <th>Остаток паевого взноса</th>
-                            <th>Ежемесячный платеж</th>
+                            <th><?php echo $local_table_month; ?></th>
+                            <th><?php echo $local_table_object_price; ?></th>
+                            <th><?php echo $local_table_entrance_fee; ?></th>
+                            <th><?php echo $local_table_initial_fee; ?></th>
+                            <th><?php echo $local_table_monthly_share_fee; ?></th>
+                            <th><?php echo $local_table_membership_fee; ?> <span><?php echo $local_table_membership_fee_unit; ?></span></th>
+                            <th><?php echo $local_table_share_fee_remain; ?></th>
+                            <th><?php echo $local_table_monthly_payment; ?></th>
                         </tr>
                     </thead>
                     <?php if(isset($duration) && isset($obj_price) && isset($init_fee_percent)): ?>
@@ -72,7 +72,7 @@
                         <?php endfor; ?>
                         <tr>
                             <td></td>
-                            <th>Итого переплата</th>
+                            <th><?php echo $local_table_overpayment; ?></th>
                             <td><?php echo $entrance_fee?></td>
                             <td></td>
                             <td></td>

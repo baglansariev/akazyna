@@ -1,7 +1,7 @@
 <?php if(isset($questions)): ?>
     <section class="questionnaire">
         <div class="container">
-            <h3 class="row-title">Часто задаваемые вопросы</h3>
+            <h3 class="row-title"><?php echo $local_questions_list_title; ?></h3>
             <div class="row">
                 <div class="accordion">
                     <?php foreach($questions as $question): ?>

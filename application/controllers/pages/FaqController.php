@@ -6,12 +6,14 @@
     {
         public function indexAction()
         {
-            $this->view->asset->setTitle('Вопрос-Ответ');
+            $language = $this->load->language('pages/faq');
+
+            $this->view->asset->setTitle($language->get('local_page_title'));
             $this->view->asset->setCss('/public/style/css/accordion.css');
             $this->view->asset->setJs('/public/style/js/accordion.js');
 
             $data = array();
-            $data['page_title'] = $this->load->controller('modules/pageTitle')->getPageTitle('Вопрос-Ответ');
+            $data['page_title'] = $this->load->controller('modules/pageTitle')->getPageTitle($language->get('local_page_title'));
             $data['questions'] = $this->load->controller('modules/questionnaire')->getQuestionsList(4, true);
             $data['question_form'] = $this->load->controller('modules/questionnaire')->getQuestionForm();
 

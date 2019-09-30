@@ -4,6 +4,8 @@
 
     class Calculator extends Controller
     {
+        // Локализация
+        public $lang;
         // Срок выделения средств
         public $duration;
         // Стоимость объекта
@@ -49,6 +51,7 @@
         public function __construct()
         {
             parent::__construct();
+            $this->lang = $this->load->language('modules/calculator');
 
             if($this->calcFormValidate()){
                 $this->entranceFee = $this->objPrice * $this->entranceFeePercent;
@@ -65,6 +68,33 @@
         public function index()
         {
             $data = array();
+
+            // Локализация
+            $data['local_calculator_main_title'] = $this->lang->get('local_calculator_main_title');
+            $data['local_duration'] = $this->lang->get('local_duration');
+            $data['local_duration_unit'] = $this->lang->get('local_duration_unit');
+            $data['local_duration_placeholder'] = $this->lang->get('local_duration_placeholder');
+            $data['local_object_price'] = $this->lang->get('local_object_price');
+            $data['local_object_price_unit'] = $this->lang->get('local_object_price_unit');
+            $data['local_object_price_placeholder'] = $this->lang->get('local_object_price_placeholder');
+            $data['local_initial_fee'] = $this->lang->get('local_initial_fee');
+            $data['local_initial_fee_unit'] = $this->lang->get('local_initial_fee_unit');
+            $data['local_initial_fee_placeholder'] = $this->lang->get('local_initial_fee_placeholder');
+            $data['local_overpayment_text'] = $this->lang->get('local_overpayment_text');
+            $data['local_overpayment_unit'] = $this->lang->get('local_overpayment_unit');
+            $data['local_calc_button'] = $this->lang->get('local_calc_button');
+            $data['local_table_title'] = $this->lang->get('local_table_title');
+            $data['local_table_month'] = $this->lang->get('local_table_month');
+            $data['local_table_object_price'] = $this->lang->get('local_table_object_price');
+            $data['local_table_entrance_fee'] = $this->lang->get('local_table_entrance_fee');
+            $data['local_table_initial_fee'] = $this->lang->get('local_table_initial_fee');
+            $data['local_table_monthly_share_fee'] = $this->lang->get('local_table_monthly_share_fee');
+            $data['local_table_membership_fee'] = $this->lang->get('local_table_membership_fee');
+            $data['local_table_membership_fee_unit'] = $this->lang->get('local_table_membership_fee_unit');
+            $data['local_table_share_fee_remain'] = $this->lang->get('local_table_share_fee_remain');
+            $data['local_table_monthly_payment'] = $this->lang->get('local_table_monthly_payment');
+            $data['local_table_overpayment'] = $this->lang->get('local_table_overpayment');
+
             $data['duration'] = $this->duration;
             $data['obj_price'] = $this->objPrice;
             $data['init_fee_percent'] = $this->initFeePercent;
@@ -92,13 +122,13 @@
                 $this->request->has('initial-fee', 'post')
             ){
                 if((int)$this->request->post['duration'] >= $this->durationMin && (int)$this->request->post['duration'] <= $this->durationMax){ $this->duration = (int)$this->request->post['duration']; }
-                else{ $this->error_msg['duration'] = 'Срок выделения средств должен быть от 1 до 180 месяцев'; }
+                else{ $this->error_msg['duration'] = $this->lang->get('local_duration_msg'); }
 
                 if((int)$this->request->post['object-price'] >= $this->objPriceMin){ $this->objPrice = (int)$this->request->post['object-price']; }
-                else{ $this->error_msg['obj_price'] = 'Стоимость объекта не должен быть меньше 3 000 000 тг'; }
+                else{ $this->error_msg['obj_price'] = $this->lang->get('local_object_price_msg'); }
 
                 if((int)$this->request->post['initial-fee'] >= $this->initFeeMin){ $this->initFeePercent = $this->request->post['initial-fee']; }
-                else{ $this->error_msg['init_fee'] = 'Первоначальный взнос не должен быть меньше 28 %'; }
+                else{ $this->error_msg['init_fee'] = $this->lang->get('local_initial_fee_msg'); }
 
                 if(!empty($this->duration && !empty($this->objPrice) && !empty($this->initFeePercent))){ return true; }
                 return false;
