@@ -65,7 +65,7 @@
             }
         }
 
-        public function index()
+        public function getCalcModule()
         {
             $data = array();
 
@@ -134,5 +134,10 @@
                 return false;
             }
             return false;
+        }
+
+        public function popupCalcModule()
+        {
+            return $this->load->view('modules/popup-calculator');
         }
     }

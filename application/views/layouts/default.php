@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="/public/style/bootstrap/bootstrap-grid.css">
     <link rel="stylesheet" href="/public/style/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="/public/style/contact-form/popup-contact-form.css">
+    <link rel="stylesheet" href="/public/style/css/calculator.css">
     <? foreach($this->asset->getCss() as $css): ?>
 	<link rel="stylesheet" href="<?= $css ?>">
 	<? endforeach ?>

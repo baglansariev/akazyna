@@ -69,3 +69,4 @@
         </div>
     </div>
 </footer>
+<?php echo $calc_module; ?>

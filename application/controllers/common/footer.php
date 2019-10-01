@@ -18,6 +18,8 @@
 		    $data['local_client_sign'] = $language->get('local_client_sign');
 		    $data['local_developer_sign'] = $language->get('local_developer_sign');
 
+            $data['calc_module'] = $this->load->controller('modules/calculator')->popupCalcModule();
+
 			return $this->load->view('common/footer', $data);
 		}
 	}

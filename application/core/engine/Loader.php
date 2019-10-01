@@ -66,7 +66,7 @@
 
         public function language($path = false)
         {
-            $languageClaass = 'controllers\common\Language';
+            $languageClaass = 'controllers\common\language';
 
             if(class_exists($languageClaass)){
                 return  new $languageClaass($path);
