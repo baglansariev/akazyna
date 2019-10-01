@@ -30,11 +30,6 @@
             return $this->db->getAllRows($sql);
         }
 
-        public function getFrequentQuestions()
-        {
-            //..
-        }
-
         public function getTotalQuestions()
         {
             $sql = "SELECT COUNT(*) AS count FROM " . DB_PREFIX . "questions WHERE status = 'published'";

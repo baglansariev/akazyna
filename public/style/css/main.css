@@ -364,7 +364,7 @@ header{
 .counter-icon{
 	color: #CECECE;
 	font-size: 50px;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 .counter-digit{
 	color: #1E87E1;
@@ -742,6 +742,25 @@ footer .container{
 	display: flex;
 	justify-content: center;
 }
+.login, .register{
+	width: 100%;
+	padding: 40px 0;
+}
+.login-form, .register-form{
+	display: flex;
+	justify-content: center;
+}
+.login-form-container, .register-form-container{
+	border: 1px solid #ebebeb;
+	padding: 5px;
+	background-color: #f8f8f8;
+}
+.login-form-container form, .register-form-container form{
+	background-color: #fff;
+	padding: 30px 10px;
+	border: 1px solid #ebebeb;
+}
+
 
 
 

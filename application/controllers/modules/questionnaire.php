@@ -47,11 +47,6 @@
             return $this->load->view('modules/questionnaire', $data);
         }
 
-        public function getFrequentQuestions()
-        {
-            return $this->load->view('modules/questionnaire');
-        }
-
         public function getQuestionForm()
         {
             $this->setQuestion();

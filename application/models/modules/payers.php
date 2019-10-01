@@ -4,6 +4,12 @@
 
     class Payers extends Model
     {
+        public function getPayersList()
+        {
+            $sql = "SELECT * FROM " . DB_PREFIX . "payers";
+            return $this->db->getAllRows($sql);
+        }
+
         public function getPayersVideo()
         {
             $sql = "SELECT * FROM " . DB_PREFIX . "payers_video";

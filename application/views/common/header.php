@@ -23,7 +23,7 @@
                         <?php endforeach;?>
                     </nav>
                 <?php endif; ?>
-                <a href="#" class="account">
+                <a href="/login" class="account">
                     <i class="fas fa-user-alt"></i>
                     <span><?php echo $local_sign_in; ?></span>
                 </a>

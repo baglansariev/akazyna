@@ -12,7 +12,7 @@
                     <div class="form-group">
                         <label for="object-price"><?php echo $local_object_price; ?> <span>(<?php echo $local_object_price_unit; ?>)</span></label>
                         <i class="calc-message"><?php if(isset($obj_price_msg)) echo $obj_price_msg; ?></i>
-                        <input id="object-price" type="number" name="object-price" value="<?php if(isset($obj_price)) echo $obj_price; ?>" placeholder="<?php echo $local_object_placeholder; ?>" required>
+                        <input id="object-price" type="number" name="object-price" value="<?php if(isset($obj_price)) echo $obj_price; ?>" placeholder="<?php echo $local_object_price_placeholder; ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="initial-fee"><?php echo $local_initial_fee; ?> <span>(<?php echo $local_initial_fee_unit; ?>)</span></label>

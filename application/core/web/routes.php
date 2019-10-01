@@ -32,4 +32,28 @@
             'controller' => 'contacts',
             'action' => 'index',
         ],
+        'login' => [
+            'controller' => 'account',
+            'action' => 'login',
+        ],
+        'register' => [
+            'controller' => 'account',
+            'action' => 'register',
+        ],
+        'account' => [
+            'controller' => 'account',
+            'action' => 'account',
+        ],
+        'account/payers' => [
+            'controller' => 'account',
+            'action' => 'account',
+        ],
+        'account/documents' => [
+            'controller' => 'account',
+            'action' => 'account',
+        ],
+        'logout' => [
+            'controller' => 'account',
+            'action' => 'logout',
+        ],
 	];

@@ -12,7 +12,7 @@
 
         public function has($key)
         {
-            if(isset($_SESSION[$key])){
+            if(!empty($_SESSION[$key])){
                 return true;
             }
             return false;
@@ -30,11 +30,6 @@
             else{
                 $_SESSION[$key] = $value;
             }
-        }
-
-        public function start()
-        {
-            session_start();
         }
 
         public function del($key)

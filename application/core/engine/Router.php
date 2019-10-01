@@ -13,6 +13,7 @@
 
 	    public function __construct()
 	    {
+	        session_start();
 	        $this->routes = require_once(ROUTES_PATH . 'routes.php');
 	        $this->request = new Request;
 	        $this->view = new View;

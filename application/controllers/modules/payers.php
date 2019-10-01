@@ -14,6 +14,25 @@
             $this->lang = $this->load->language('modules/payers');
         }
 
+        public function getPayersList()
+        {
+            $data = array();
+            $payers_list = $this->payers_model->getPayersList();
+            $data['payers_list'] = array();
+
+            if($payers_list){
+                foreach($payers_list as $key => $payer) {
+                    $data['payers_list'][$key]['id'] = $payer['id'];
+                    $data['payers_list'][$key]['name'] = $payer['name'];
+                    $data['payers_list'][$key]['phone'] = $payer['phone'];
+                    $data['payers_list'][$key]['payed_sum'] = number_format($payer['payed_sum'], 0, '', ' ');
+                    $data['payers_list'][$key]['status'] = $payer['status'];
+                }
+            }
+
+            return $this->load->view('modules/payers/payers-list', $data);
+        }
+
         public function getPayersVideo()
         {
             $data = array();
