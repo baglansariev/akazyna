@@ -1,7 +1,7 @@
 <?php
     namespace controllers\modules;
     use core\engine\Controller;
-    use controllers\modules\OwlGallery;
+    use controllers\modules\owlGallery;
     use core\lib\Pagination;
 
     class News extends Controller
