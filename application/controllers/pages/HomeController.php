@@ -8,9 +8,9 @@
 
 	    public function indexAction()
 	    {
-	    	$this->view->asset->setMetaDesc('Тестовое описание');
-	    	$this->view->asset->setMetaKeys('ключ1, ключ2');
-	    	$this->view->asset->setTitle('Главная');
+	    	$this->view->asset->setMetaDesc('Одним из потребительских кооперативов является потребительский кооператив «Асар Казына», созданный в соответствии с решением учредительного собрания кооператива (протокол от «01» июня 2018 года) как добровольное объединение граждан на основе их членства в целях удовлетворения потребностей в приобретении движимого и недвижимого имущества.');
+	    	$this->view->asset->setMetaKeys('Купить недвижимость в рассрочку в Шымкенте, Купить недвижимость в рассрочку, асар казына, asarkazyna, asarkazyna.kz');
+	    	$this->view->asset->setTitle('Асар казына. Купить недвижимость в рассрочку в Шымкенте.');
             $this->view->asset->setCss('/public/style/css/main-slide.css');
             $this->view->asset->setCss('/public/style/css/accordion.css');
             $this->view->asset->setCss('/public/style/css/news.css');
