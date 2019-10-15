@@ -73,19 +73,21 @@ class Pagination
 
     public function prevPage()
     {
-        return $this->currentPage - 1;
+        $page = $this->currentPage - 1;
+        if((int)$page > $this->totalPages){ return $this->totalPages; }
+        return $this->pageValidate($page);
     }
 
     public function nextPage()
     {
-        return $this->currentPage + 1;
+        $page = $this->currentPage + 1;
+        if((int)$page > $this->totalPages){ return $this->totalPages; }
+        return $this->pageValidate($this->currentPage + 1);
     }
 
     private function pageValidate($page)
     {
-        if((int)$page && (int)$page > 0){
-            return $page;
-        }
+        if((int)$page && (int)$page > 0){ return $page; }
         $page = 1;
         return $page;
     }
