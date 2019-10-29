@@ -7,7 +7,7 @@
                     <tr>
                         <th>№</th>
                         <th>Ф.И.О</th>
-                        <th>Телефон</th>
+                        <!--<th>Телефон</th>-->
                         <th>Сумма</th>
                         <th>Статус</th>
                     </tr>
@@ -21,7 +21,7 @@
                             <tr>
                                 <td><?php echo $i; ?></td>
                                 <td><?php echo $payer['name']; ?></td>
-                                <td><?php echo $payer['phone']; ?></td>
+                                <!--<td><?php echo $payer['phone']; ?></td>-->
                                 <td><?php echo $payer['payed_sum']; ?></td>
                                 <td><?php echo $payer['status']; ?></td>
                                 <?php $i++; ?>

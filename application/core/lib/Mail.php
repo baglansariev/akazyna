@@ -19,8 +19,8 @@
         {
             $this->setPhpMailerParams();
             // Письмо
-            $this->phpMailer->Subject = 'Сайт ПИОНЕР: Клиент ' . $name . ' заказал звонок'; // Заголовок письма
-            $this->phpMailer->Body = "Клиент заказал обратный звонок с сайта pioneer-group.kz <br> \r\n"; // Текст письма
+            $this->phpMailer->Subject = 'Сайт АСАР КАЗЫНА: Клиент ' . $name . ' заказал звонок'; // Заголовок письма
+            $this->phpMailer->Body = "Клиент заказал обратный звонок с сайта asarkazyna.kz <br> \r\n"; // Текст письма
             $this->phpMailer->Body .= "Имя: $name <br> \r\n"; // Текст письма
             $this->phpMailer->Body .= "Телефон: $phone <br> \r\n"; // Текст письма
             $this->phpMailer->Body .= "E-mail клиента: $email <br> \r\n"; // Текст письма
