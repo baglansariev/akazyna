@@ -49,8 +49,12 @@
             'action' => 'account',
         ],
         'account/documents' => [
-            'controller' => 'account',
-            'action' => 'account',
+            'controller' => 'documents',
+            'action' => 'getDocumentList',
+        ],
+        'account/documents/[0-9]+' => [
+            'controller' => 'documents',
+            'action' => 'getDocument',
         ],
         'logout' => [
             'controller' => 'account',

@@ -6,9 +6,9 @@
                     <i class="fas fa-mobile-alt"></i>
                     <span>+7 778 238 6161</span>
                 </a>
-                <a href="tel:+77029375655">
+                <a href="tel:+77052850505">
                     <i class="fas fa-mobile-alt"></i>
-                    <span>+7 702 937 5655</span>
+                    <span>+7 705 285 0505</span>
                 </a>
             </div>
             <div class="header-actions">

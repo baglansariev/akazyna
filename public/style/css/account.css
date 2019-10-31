@@ -90,3 +90,13 @@
     padding: 10px 5px;
     text-align: center;
 }
+.documents{
+    width: 100%;
+    padding: 20px;
+}
+.document{
+    font-size: 14px;
+}
+.document:hover{
+    color: #1E87E1;
+}

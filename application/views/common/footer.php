@@ -11,11 +11,11 @@
                     <div class="footer-networks">
                         <p>
                             <i class="fas fa-mobile-alt"></i>
-                            <span>+7 (702) 937-56-55</span>
+                            <span>+7 778 238 6161</span>
                         </p>
                         <p>
                             <i class="fas fa-mobile-alt"></i>
-                            <span>+7 (778) 111-44-66</span>
+                            <span>+7 705 285 0505</span>
                         </p>
                         <p>
                             <i class="fas fa-envelope"></i>
